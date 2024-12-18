@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffe6f2; /* Ljusrosa bakgrund */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header, footer {
+    background-color: #ffb3d9; /* Mörkare rosa */
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ff80bf;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #660033;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+}
+
+.links a {
+    color: #99004d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px;
+    width: 95%;
+}
+
+article {
+    background-color: #ffd9e6; /* Ljusrosa */
+    padding: 10px;
+    border: 1px solid #ff80bf;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    color: #660033;
+    margin-bottom: 5px;
+}
+
+footer {
+    font-size: 0.9rem;
+    color: #660033;
+}
+
+/* Responsiv design */
+/* Mobil: Flex column */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+/* Tablett: Grid-layout */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dator: Grid-layout med 3 kolumner */
+@media (min-width: 1025px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .links {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
